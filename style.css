@@ -1,0 +1,35 @@
+.container {
+  width: auto;
+  padding: 30px 100px;
+  background-color: rgb(223,220,226);
+}
+
+.header {
+  height: 200px;
+  background-color: rgb(242,202,211);
+}
+
+.main {
+  height: 400px;
+  background-color: rgb(62,167,156);
+}
+
+.footer {
+  height: 300px;
+  background-color: rgb(103,112,128);
+}
+
+.header--title {
+  text-align: center;
+  font-size: 60px;
+}
+
+.main--title {
+  text-align: center;
+  font-size: 60px;
+}
+
+.footer--title {
+  text-align: center;
+  font-size: 60px;
+}
