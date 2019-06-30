@@ -1,35 +1,32 @@
+html * {
+  margin: 0;
+}
+
 .container {
-  width: auto;
-  padding: 30px 100px;
-  background-color: rgb(223,220,226);
+  padding: 10px;
+  background-color: #FFA;
 }
 
-.header {
+header {
+  height: 150px;
+  background-color: blueviolet;
+}
+
+main {
+  margin-top: 15px;
   height: 200px;
-  background-color: rgb(242,202,211);
+  background-color: greenyellow;
 }
 
-.main {
-  height: 400px;
-  background-color: rgb(62,167,156);
-}
-
-.footer {
+footer {
+  margin-top: 15px;
   height: 300px;
-  background-color: rgb(103,112,128);
+  background-color: tomato;
 }
 
-.header--title {
-  text-align: center;
-  font-size: 60px;
-}
-
-.main--title {
-  text-align: center;
-  font-size: 60px;
-}
-
-.footer--title {
-  text-align: center;
-  font-size: 60px;
+.center{
+  font-size: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
