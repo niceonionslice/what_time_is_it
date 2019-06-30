@@ -3,25 +3,27 @@ html * {
 }
 
 .container {
+  margin: 0 auto;·
   padding: 10px;
-  background-color: #FFA;
+  width: 70%;
+  background-color: #fdfdea;
 }
 
 header {
   height: 150px;
-  background-color: blueviolet;
+  background-color: #41c9b4;
 }
 
 main {
   margin-top: 15px;
   height: 200px;
-  background-color: greenyellow;
+  background-color: #41c9b4;
 }
 
 footer {
   margin-top: 15px;
   height: 300px;
-  background-color: tomato;
+  background-color: #41c9b4;
 }
 
 .center{
