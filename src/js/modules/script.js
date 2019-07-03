@@ -1,10 +1,5 @@
-window.addEventListener('DOMContentLoaded', () => {
-  setInterval(rooplabel, 1000);
-});
-
 const rooplabel = () => {
   document.querySelector(".main--title").innerHTML = dateNow();
-  console.log(dateNow());
 }
 
 const dateNow = () => {
@@ -19,3 +14,5 @@ const dateNow = () => {
   const label = `今日は${year}/${month}/${day} ${hours}:${minutes}:${seconds}です。`;
   return label;
 }
+
+export default rooplabel;
