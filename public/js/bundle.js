@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_script__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/script */ \"./src/js/modules/script.js\");\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  setInterval(_modules_script__WEBPACK_IMPORTED_MODULE_0__[\"default\"], 1000);\n});\n\n\n//# sourceURL=webpack:///./src/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_script__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/script */ \"./src/js/modules/script.js\");\n/* harmony import */ var _modules_swapi__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/swapi */ \"./src/js/modules/swapi.js\");\n\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  setInterval(_modules_script__WEBPACK_IMPORTED_MODULE_0__[\"default\"], 1000);\n  Object(_modules_swapi__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n});\n\n\n//# sourceURL=webpack:///./src/js/app.js?");
 
 /***/ }),
 
@@ -106,7 +106,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconst rooplabel = () => {\n  document.querySelector(\".main--title\").innerHTML = dateNow();\n  console.log(dateNow());\n}\n\nconst dateNow = () => {\n  const date = new Date();\n  const year = date.getFullYear();\n  const month = date.getMonth() + 1;\n  const day = date.getDate();\n  const hours = date.getHours();\n  const minutes = date.getMinutes();\n  const seconds = date.getSeconds();\n  // const milliseconds = date.getMilliseconds();\n  const label = `今日は${year}/${month}/${day} ${hours}:${minutes}:${seconds}です。`;\n  return label;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (rooplabel);\n\n\n//# sourceURL=webpack:///./src/js/modules/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nconst rooplabel = () => {\n  document.querySelector(\".main--title\").innerHTML = dateNow();\n}\n\nconst dateNow = () => {\n  const date = new Date();\n  const year = date.getFullYear();\n  const month = date.getMonth() + 1;\n  const day = date.getDate();\n  const hours = date.getHours();\n  const minutes = date.getMinutes();\n  const seconds = date.getSeconds();\n  // const milliseconds = date.getMilliseconds();\n  const label = `今日は${year}/${month}/${day} ${hours}:${minutes}:${seconds}です。`;\n  return label;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (rooplabel);\n\n\n//# sourceURL=webpack:///./src/js/modules/script.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/swapi.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/swapi.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nconst swapiGetResult = () => {\n  const result = document.querySelector(\"#swapi--result\");\n\n  fetch('https://swapi.co/api/people/2/', {\n    method: 'GET'\n  }).then((response) => {\n    if (response.status !== 200) {\n      throw 'エラーですわ！'\n    }\n    return response.json();\n  })\n  .then((objs) => {\n    console.log(objs);\n    // ここでDOM捜査 実はここにコールバック関数とか？\n    result.innerText = objs.name;\n  })\n  .catch((err) => {\n    console.log(err);\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (swapiGetResult);\n\n\n//# sourceURL=webpack:///./src/js/modules/swapi.js?");
 
 /***/ })
 

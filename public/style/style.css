@@ -32,3 +32,9 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
+.sw-area {
+  margin: 10px auto;
+  height: 300px;
+  background-color: #e385a4;
+}
